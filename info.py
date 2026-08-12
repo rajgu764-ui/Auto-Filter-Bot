@@ -34,8 +34,8 @@ REQST_CHANNEL = int(ch) if (ch := environ.get("REQST_CHANNEL", "-1004418130323")
 SUPPORT_CHAT_ID = int(ch) if (ch := environ.get("SUPPORT_CHAT_ID", "-1003946294006")) and id_pattern.search(ch) else None
 
 OWNER = int(os.environ.get("OWNER", "8747490676"))
-CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://telegram.me/Techifybots')
-GROUP_LINK = environ.get('GROUP_LINK', 'https://telegram.me/TechifySupport')
+CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://telegram.me/CineqaroUpdateChannel')
+GROUP_LINK = environ.get('GROUP_LINK', 'https://telegram.me/CineqaroSupportGroup')
 
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://infinity-linker:infinity-linker-5853@cluster0.w3uex4d.mongodb.net/?appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "CineqaroBot_db")
@@ -67,7 +67,7 @@ SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "omegalinks.in")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "1200"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
 
-FAST_MODE = is_enabled(environ.get('FAST_MODE', "False"), False)
+FAST_MODE = is_enabled(environ.get('FAST_MODE', "True"), True)
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 MAX_BTNS = environ.get("MAX_BTNS", "5")
 MSG_ALRT = environ.get('MSG_ALRT', '𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖬𝖾 ♥️')
