@@ -22,23 +22,23 @@ INDEX_CAPTION = bool(environ.get('INDEX_CAPTION', False))
 COVER = bool(environ.get('COVER', False))
 PICS = (environ.get('PICS', 'https://i.ibb.co/PzZNZHF6/IMG-20251116-113905-254.jpg https://i.ibb.co/8npWSZ5T/pic.jpg')).split()
 MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://i.ibb.co/2769f1rF/photo-2025-09-03-14-48-34-7548400762112442372.jpg")
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1255023013').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '8747490676').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', ''))
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', ''))
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()]
-AUTH_CHANNELS = [int(ch) for ch in environ.get("AUTH_CHANNELS", "").split() if ch and id_pattern.match(ch)]
-AUTH_REQ_CHANNELS = [int(ch) for ch in environ.get("AUTH_REQ_CHANNELS", "").split() if ch and id_pattern.match(ch)]
-REQST_CHANNEL = int(ch) if (ch := environ.get("REQST_CHANNEL", "")) and id_pattern.search(ch) else None
-SUPPORT_CHAT_ID = int(ch) if (ch := environ.get("SUPPORT_CHAT_ID", "")) and id_pattern.search(ch) else None
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003701301311'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003965015923'))
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003701301311'))
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1004218490165').split()]
+AUTH_CHANNELS = [int(ch) for ch in environ.get("AUTH_CHANNELS", "-1003748603064").split() if ch and id_pattern.match(ch)]
+AUTH_REQ_CHANNELS = [int(ch) for ch in environ.get("AUTH_REQ_CHANNELS", "-1004295925966").split() if ch and id_pattern.match(ch)]
+REQST_CHANNEL = int(ch) if (ch := environ.get("REQST_CHANNEL", "-1004418130323")) and id_pattern.search(ch) else None
+SUPPORT_CHAT_ID = int(ch) if (ch := environ.get("SUPPORT_CHAT_ID", "-1003946294006")) and id_pattern.search(ch) else None
 
-OWNER = int(os.environ.get("OWNER", "1255023013"))
+OWNER = int(os.environ.get("OWNER", "8747490676"))
 CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://telegram.me/Techifybots')
 GROUP_LINK = environ.get('GROUP_LINK', 'https://telegram.me/TechifySupport')
 
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "filter")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://infinity-linker:infinity-linker-5853@cluster0.w3uex4d.mongodb.net/?appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "CineqaroBot_db")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'files')
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False)
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
